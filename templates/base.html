@@ -4,7 +4,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>{% block title %}{% endblock %}</title>
+    {% block style %}
+    
+    {% endblock style %}
+    <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+    <title>Startup Traingin Institute - {% block title %}{% endblock %}</title>
     <link rel="stylesheet" href="{% static 'css/flaty.css' %}">
     
     
@@ -14,12 +18,17 @@
 
     
     {% include "navbar.html" %}
+
+
     {% block body %}
       
     {% endblock body %}
+
+    {% block script %} {% endblock script %}
     
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
     <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
 
   </body>
 
