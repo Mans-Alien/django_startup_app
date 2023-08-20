@@ -1,0 +1,23 @@
+
+{% load static%}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'minty.css' %}">
+  </head>
+
+  <body>
+
+    
+    {% include "navbar.html" %}
+    {% block body %}
+      
+    {% endblock body %}
+    
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+  </body>
+
+</html>
