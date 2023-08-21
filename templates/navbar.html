@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">S.T.I Bangalore</a>
+    <a class="navbar-brand" href="/">S.T.I Bangalore</a>
     <button
       class="navbar-toggler"
       type="button"
@@ -15,25 +15,45 @@
     <div class="collapse navbar-collapse" id="navbarColor01">
       <ul class="navbar-nav me-auto">
         <li class="nav-item">
-          <a class="nav-link active" href="/"
+          <a class="nav-link {% block home %} {% endblock home %}" href="/"
             >Home
             <span class="visually-hidden">(current)</span>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/courses">Courses</a>
+          <a
+            class="nav-link {% block courses %} {% endblock courses %}"
+            href="/courses"
+            >Courses</a
+          >
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/about">About</a>
+          <a
+            class="nav-link {% block about %} {% endblock about %}"
+            href="/about"
+            >About Us</a
+          >
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/contact">Contact</a>
+          <a
+            class="nav-link {% block contact %} {% endblock contact %}"
+            href="/contact"
+            >Contact Us</a
+          >
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/attendance">Attendance</a>
+          <a
+            class="nav-link {% block attendance %} {% endblock attendance %}"
+            href="/attendance"
+            >Attendance</a
+          >
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/enroll">Enroll</a>
+          <a
+            class="nav-link {% block enroll %} {% endblock enroll %}"
+            href="/enroll"
+            >Enroll</a
+          >
         </li>
         <li class="nav-item dropdown">
           <a
@@ -43,7 +63,8 @@
             role="button"
             aria-haspopup="true"
             aria-expanded="false"
-            >Services</a>
+            >Services</a
+          >
           <div class="dropdown-menu">
             <a class="dropdown-item" href="/">Training Professional Courses</a>
             <a class="dropdown-item" href="/">Freelancing</a>
@@ -51,7 +72,6 @@
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="/">Online or Offline Training</a>
           </div>
-          
         </li>
 
         <li class="nav-item dropdown">
@@ -62,17 +82,18 @@
             role="button"
             aria-haspopup="true"
             aria-expanded="false"
-            >Signin</a>
+            >Signin</a
+          >
           <div class="dropdown-menu">
             <a class="dropdown-item" href="/auth/signup">Signup</a>
             <a class="dropdown-item" href="/auth/login">Login</a>
-            <a class="dropdown-item" href="/auth/reset-password">Reset Password</a>
+            <a class="dropdown-item" href="/auth/reset-password"
+              >Reset Password</a
+            >
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="/auth/logout">Logout</a>
           </div>
-          
         </li>
-
       </ul>
       <form class="d-flex">
         <input
